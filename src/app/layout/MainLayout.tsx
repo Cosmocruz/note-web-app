@@ -9,7 +9,7 @@ interface IMainLayout {
 
 const MainLayout: FC<IMainLayout> = () => {
     return (
-        <div className="flex flex-col  min-h-screen  bg-red-500">
+        <div className="flex flex-col  min-h-screen  bg-[#EA5959]">
             <TopNav />
             <div className="relative  grow">{<Outlet />}</div>
             <Footer />
