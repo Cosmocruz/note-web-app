@@ -22,7 +22,7 @@ export const ListNotes: FC<IListNotes> = () => {
                         {tagList.map((tag) => (
                             <div
                                 className={`text-xl   leading-normal  ${
-                                    tag === 'All' ? 'text-red-500 font-bold' : 'text-[#525252] font-normal '
+                                    tag === 'All' ? 'text-[#EA5959] font-bold' : 'text-[#525252] font-normal '
                                 } `}
                             >
                                 {' '}
@@ -40,7 +40,7 @@ export const ListNotes: FC<IListNotes> = () => {
                         <div className="mt-6">
                             <form>
                                 <input
-                                    className="bg-[#F3F3F3] w-full outline-none rounded-lg px-6 py-3 placeholder:text-lg placeholder:leading-normal placeholder:font-normal placeholder:text-[#B5B5B5] caret-[#EA5959] caret- "
+                                    className="bg-[#F3F3F3] w-full text-[#EA5959] outline-none rounded-lg px-6 py-3 placeholder:text-lg placeholder:leading-normal placeholder:font-normal placeholder:text-[#B5B5B5] caret-[#EA5959] caret- "
                                     type="text"
                                     placeholder="Add a new task inside ‘All’ category"
                                     name="newtask"
