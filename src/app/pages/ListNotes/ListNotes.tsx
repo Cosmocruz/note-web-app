@@ -14,8 +14,8 @@ const notes = [
 
 export const ListNotes: FC<IListNotes> = () => {
     return (
-        <div className="absolute top-0 bottom-0 left-0 right-0 flex items-center justify-center px-32  ">
-            <div className=" grid grid-cols-4 w-full rounded-lg px-12 bg-white  ">
+        <div className="absolute top-0 bottom-0 left-0 right-0 flex items-start justify-center   ">
+            <div className=" grid grid-cols-4 w-full rounded-lg px-0 bg-white  mt-32 mx-auto max-w-3xl ">
                 {/* sidebar */}
                 <div className="col-span-1 pl-12 py-4 pt-36">
                     <div className="flex flex-col gap-6 pb-20">
@@ -40,7 +40,7 @@ export const ListNotes: FC<IListNotes> = () => {
                         <div className="mt-6">
                             <form>
                                 <input
-                                    className="bg-[#F3F3F3] w-full text-[#EA5959] outline-none rounded-lg px-6 py-3 placeholder:text-lg placeholder:leading-normal placeholder:font-normal placeholder:text-[#B5B5B5] caret-[#EA5959] caret- "
+                                    className="bg-[#F3F3F3] font-medium w-full text-[#EA5959] outline-none rounded-lg px-6 py-3 placeholder:text-lg placeholder:leading-normal placeholder:font-normal placeholder:text-[#B5B5B5] caret-[#EA5959] caret- "
                                     type="text"
                                     placeholder="Add a new task inside ‘All’ category"
                                     name="newtask"
@@ -51,11 +51,13 @@ export const ListNotes: FC<IListNotes> = () => {
                         {/* notes */}
                         <div className="mt-8">
                             {notes.map((note) => (
-                                <div className="flex gap-4 items-center group pl-1" key={note.id}>
+                                <div className="flex items-center gap-4  group pl-1" key={note.id}>
+                                    <input type="checkbox" className="accent-[#EA5959]" name={note.id.toString()} />
+
                                     <div className="text-lg leading-normal font-normal text-[#5A5A5A]">
                                         {note.title}
                                     </div>
-                                    <div className="text-white text-xs leading-normal font-normal bg-[#EA5959] py-1 !w-28 flex justify-center rounded ">
+                                    <div className="text-white text-xs leading-normal font-medium bg-[#EA5959] py-1 !w-28 flex justify-center rounded ">
                                         {note.tag}
                                     </div>
                                     <div className="hidden cursor-pointer ml-auto group-hover:block">
